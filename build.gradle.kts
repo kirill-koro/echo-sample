@@ -1,0 +1,12 @@
+plugins {
+    alias(libs.plugins.android.application).apply(false)
+    alias(libs.plugins.kotlin.android).apply(false)
+    alias(libs.plugins.google.devtools.ksp).apply(false)
+    alias(libs.plugins.jetbrains.kotlin.serialization).apply(false)
+    alias(libs.plugins.gitlab.arturbosch.detekt).apply(false)
+    alias(libs.plugins.icerock.mobile.multiplatformResources).apply(false)
+    alias(libs.plugins.jetbrains.kotlin.multiplatform).apply(false)
+    alias(libs.plugins.firebase.crashlytics).apply(false)
+    alias(libs.plugins.google.services).apply(false)
+    alias(libs.plugins.sqldelight).apply(false)
+}
