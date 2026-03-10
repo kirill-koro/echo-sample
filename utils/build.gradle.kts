@@ -3,3 +3,7 @@ plugins {
 }
 
 android.namespace = "ru.tsu.echoSample.utils"
+
+dependencies {
+    implementation(libs.moko.resources)
+}

@@ -24,6 +24,7 @@ dependencies {
 
     api(libs.moko.errors)
     api(libs.moko.units)
+    api(libs.moko.fields.flow)
     implementation(libs.moko.network.errors)
     api(libs.multiplatformSettings)
 }

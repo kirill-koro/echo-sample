@@ -1,4 +1,4 @@
-package ru.tsu.echoSample.utils.bindings
+package ru.tsu.echoSample.utils.binding
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner

@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:hint="@string/search_topics_search_bar" />
+        android:hint="@string/search_topics_search_bar"
+        app:textCentered="true" />
 
     <com.google.android.material.search.SearchView
         android:id="@+id/searchContent"

@@ -7,6 +7,7 @@
     <string name="search_topics_bottom_nav_title">Search</string>
     <string name="search_topics_search_bar">Search for topics</string>
     <string name="search_topics_search_content">What topic are you interested in?</string>
+    <string name="search_topics_search_field_error">The search query cannot be empty</string>
 
     <string name="topics_greeting">Topics</string>
     <string name="topics_bottom_nav_title">Topics</string>

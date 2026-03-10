@@ -16,6 +16,10 @@ class HomeFragment : NoParamsFragment<HomeFragmentBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupComponents()
+    }
+
+    private fun setupComponents() {
         setupBottomNav()
     }
 

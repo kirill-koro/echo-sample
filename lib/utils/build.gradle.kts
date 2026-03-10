@@ -10,4 +10,5 @@ dependencies {
     ksp(libs.dagger.compiler)
 
     implementation(libs.moko.resources)
+    implementation(libs.moko.fields.flow)
 }
