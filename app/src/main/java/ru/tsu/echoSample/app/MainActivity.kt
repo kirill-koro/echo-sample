@@ -11,7 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import ru.tsu.echoSample.app.databinding.MainActivityBinding
 import ru.tsu.echoSample.app.di.NoParamsActivity
-import ru.tsu.echoSample.app.utils.requireNavHostFragment
+import ru.tsu.echoSample.app.utils.requireMainNavHostFragment
 
 class MainActivity : NoParamsActivity() {
     private lateinit var binding: MainActivityBinding
@@ -40,12 +40,12 @@ class MainActivity : NoParamsActivity() {
     }
 
     private fun setupAppBarConfiguration() {
-        val navHostFragment = requireNavHostFragment()
+        val navHostFragment = requireMainNavHostFragment()
         val navController = navHostFragment.navController
         appBarConfiguration =
             AppBarConfiguration(
                 setOf(
-                    R.id.sampleFragment,
+                    R.id.homeFragment,
                 ),
             )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -61,7 +61,7 @@ class MainActivity : NoParamsActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navHostFragment = requireNavHostFragment()
+        val navHostFragment = requireMainNavHostFragment()
         return navHostFragment.navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

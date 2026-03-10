@@ -1,9 +1,9 @@
 package ru.tsu.echoSample.lib
 
-import ru.tsu.echoSample.lib.utils.logout.LogoutHandler
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.receiveAsFlow
+import ru.tsu.echoSample.lib.utils.logout.LogoutHandler
 
 class ChannelLogoutHandler : LogoutHandler {
     private val logoutEventsChannel = Channel<Unit>()

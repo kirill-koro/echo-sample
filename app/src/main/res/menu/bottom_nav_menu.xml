@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/topicsFragment"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="@string/topics_bottom_nav_title" />
+
+    <item
+        android:id="@+id/searchTopicsFragment"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_topics_bottom_nav_title" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="@string/profile_bottom_nav_title" />
+</menu>

@@ -18,9 +18,6 @@ android {
 dependencies {
     implementation(libs.material)
     implementation(libs.bundles.androidx)
-    implementation(libs.bundles.moko.crashReporting)
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.crashlytics)
     implementation(libs.moko.units.viewBinding)
 
     implementation(projects.lib)

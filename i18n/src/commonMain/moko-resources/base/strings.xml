@@ -2,4 +2,13 @@
 <resources>
     <string name="central_sample_title">Hello, sample fragment! Tap here</string>
     <string name="central_assisted_sample_title">Hello, assisted sample fragment!</string>
+
+    <string name="search_topics_greeting">Search Topics</string>
+    <string name="search_topics_bottom_nav_title">Search</string>
+
+    <string name="topics_greeting">Topics</string>
+    <string name="topics_bottom_nav_title">Topics</string>
+
+    <string name="profile_greeting">Profile</string>
+    <string name="profile_bottom_nav_title">Profile</string>
 </resources>

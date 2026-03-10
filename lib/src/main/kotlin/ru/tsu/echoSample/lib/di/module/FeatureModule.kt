@@ -4,11 +4,11 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import ru.tsu.echoSample.lib.di.ViewModelFactory
-import ru.tsu.echoSample.lib.feature.sample.di.FeatureSampleModule
+import ru.tsu.echoSample.lib.feature.topic.di.FeatureTopicModule
 
 @Module(
     includes = [
-        FeatureSampleModule::class,
+        FeatureTopicModule::class,
     ]
 )
 interface FeatureModule {

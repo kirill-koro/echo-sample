@@ -1,7 +1,5 @@
 package ru.tsu.echoSample.lib.utils.paging
 
-import ru.tsu.echoSample.lib.utils.state.RemoteState
-import ru.tsu.echoSample.lib.utils.state.RemoteStateData
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope
@@ -10,6 +8,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import ru.tsu.echoSample.lib.utils.state.RemoteState
+import ru.tsu.echoSample.lib.utils.state.RemoteStateData
 
 /**
  * The pagination implementation to use inside a business-logic module.

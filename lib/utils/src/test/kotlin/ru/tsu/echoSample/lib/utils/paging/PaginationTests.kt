@@ -1,7 +1,5 @@
 package ru.tsu.echoSample.lib.utils.paging
 
-import ru.tsu.echoSample.lib.utils.state.RemoteState
-import ru.tsu.echoSample.lib.utils.state.RemoteStateData
 import kotlinx.coroutines.async
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.coroutineScope
@@ -9,6 +7,8 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.test.runTest
+import ru.tsu.echoSample.lib.utils.state.RemoteState
+import ru.tsu.echoSample.lib.utils.state.RemoteStateData
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals

@@ -5,8 +5,8 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import ru.tsu.echoSample.lib.di.module.LibModule
-import ru.tsu.echoSample.lib.di.qualifiers.AppContext
-import ru.tsu.echoSample.lib.di.qualifiers.BaseUrl
+import ru.tsu.echoSample.lib.di.qualifier.AppContext
+import ru.tsu.echoSample.lib.di.qualifier.BaseUrl
 import ru.tsu.echoSample.lib.di.scope.AppScope
 
 @AppScope

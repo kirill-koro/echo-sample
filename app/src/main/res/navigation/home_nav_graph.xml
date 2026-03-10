@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/searchTopicsFragment">
+
+    <fragment
+        android:id="@id/topicsFragment"
+        android:name="ru.tsu.echoSample.app.feature.topic.TopicsFragment"
+        tools:layout="@layout/topics_fragment" />
+
+    <fragment
+        android:id="@id/searchTopicsFragment"
+        android:name="ru.tsu.echoSample.app.feature.topic.SearchTopicsFragment"
+        tools:layout="@layout/search_topics_fragment" />
+
+    <fragment
+        android:id="@id/profileFragment"
+        android:name="ru.tsu.echoSample.app.feature.profile.ProfileFragment"
+        tools:layout="@layout/profile_fragment" />
+</navigation>
