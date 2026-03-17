@@ -15,6 +15,10 @@
         android:name="ru.tsu.echoSample.app.feature.topic.TopicsFragment"
         tools:layout="@layout/topics_fragment">
 
-        <deepLink app:uri="echo://ru.tsu/topics" />
+        <argument
+            android:name="query"
+            app:argType="string" />
+
+        <deepLink app:uri="echo://ru.tsu/topics?q={query}" />
     </fragment>
 </navigation>

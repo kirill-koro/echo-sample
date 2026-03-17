@@ -6,8 +6,14 @@ import androidx.core.net.toUri
 sealed class DeepLinkRegistry {
     internal val prefix = "echo://ru.tsu"
 
-    data class Request(private val destination: String) : DeepLinkRegistry() {
+    data class Request(private val screenKey: String) : DeepLinkRegistry() {
+        private var raw = "$prefix/$screenKey"
         val uri: Uri
-            get() = "$prefix/$destination".toUri()
+            get() = raw.toUri()
+
+        fun query(value: String): Request {
+            raw += "?q=$value"
+            return this
+        }
     }
 }

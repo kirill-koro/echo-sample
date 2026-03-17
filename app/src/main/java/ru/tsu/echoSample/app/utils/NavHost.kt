@@ -12,6 +12,12 @@ internal fun DaggerActivity.requireMainNavHostFragment(): NavHostFragment {
     return host
 }
 
+internal fun DaggerFragment<*>.requireMainNavHostFragment(): NavHostFragment {
+    val host = (requireActivity() as? DaggerActivity)?.requireMainNavHostFragment()
+    requireNotNull(host) { "The main nav host fragment was not found" }
+    return host
+}
+
 internal fun DaggerFragment<*>.requireHomeNavHostFragment(): NavHostFragment {
     val host =
         childFragmentManager.findFragmentById(R.id.homeNavHostFragment) as? NavHostFragment
