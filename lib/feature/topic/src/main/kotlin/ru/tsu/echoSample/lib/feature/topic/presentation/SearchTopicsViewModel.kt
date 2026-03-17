@@ -37,7 +37,7 @@ class SearchTopicsViewModel @Inject constructor(
     private val _actions = Channel<Actions>()
     val actions = _actions.receiveAsFlow()
 
-    fun onSearchButtonClicked() {
+    private fun onSearch() {
         if (_state.value is State.Pending) return
 
         _state.update { State.Pending }
@@ -64,8 +64,8 @@ class SearchTopicsViewModel @Inject constructor(
         _state.update { State.ValidationFailed }
     }
 
-    fun onKeyboardReturnButtonClicked() {
-        onSearchButtonClicked()
+    fun onImeActionButtonClicked() {
+        onSearch()
     }
 
     sealed interface State {
