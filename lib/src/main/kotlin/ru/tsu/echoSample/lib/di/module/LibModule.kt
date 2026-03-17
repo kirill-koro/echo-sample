@@ -5,6 +5,7 @@ import dagger.Module
 @Module(
     includes = [
         FeatureModule::class,
+        RepositoryModule::class,
         ExceptionHandlerModule::class,
     ]
 )
