@@ -16,6 +16,7 @@ data class TopicDto(
     }
 
     companion object {
+        @Suppress("MagicNumber")
         fun create(id: Int): TopicDto {
             return TopicDto(
                 id = id,

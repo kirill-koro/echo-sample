@@ -11,6 +11,7 @@ data class SourceDto(
     val publishedAt: Int,
 ) {
     companion object {
+        @Suppress("MagicNumber")
         fun create(id: Int): SourceDto {
             return SourceDto(
                 id = id,
