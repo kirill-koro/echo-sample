@@ -79,7 +79,7 @@ class SearchTopicsFragment : NoParamsFragment<SearchTopicsFragmentBinding>() {
 
     private fun onKeyboardEditorActionClicked(actionId: Int): Boolean {
         return if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-            viewModel.onKeyboardReturnButtonClicked()
+            viewModel.onImeActionButtonClicked()
             true
         } else {
             false

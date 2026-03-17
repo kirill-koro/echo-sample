@@ -9,4 +9,12 @@
         android:id="@+id/homeFragment"
         android:name="ru.tsu.echoSample.app.feature.home.HomeFragment"
         tools:layout="@layout/home_fragment" />
+
+    <fragment
+        android:id="@+id/topicsFragment"
+        android:name="ru.tsu.echoSample.app.feature.topic.TopicsFragment"
+        tools:layout="@layout/topics_fragment">
+
+        <deepLink app:uri="echo://ru.tsu/topics" />
+    </fragment>
 </navigation>
