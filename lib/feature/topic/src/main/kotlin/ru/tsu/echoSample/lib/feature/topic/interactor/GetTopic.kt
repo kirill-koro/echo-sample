@@ -1,13 +1,13 @@
-package ru.tsu.echoSample.lib.interactor
+package ru.tsu.echoSample.lib.feature.topic.interactor
 
 import ru.tsu.echoSample.lib.feature.topic.model.Topic
 import ru.tsu.echoSample.lib.feature.topic.model.TopicRepository
 import javax.inject.Inject
 
-class GetTopics @Inject constructor(
+class GetTopic @Inject constructor(
     private val repository: TopicRepository,
 ) {
-    suspend fun await(): List<Topic> {
-        return repository.getTopics()
+    suspend fun await(id: Int): Topic {
+        return repository.getTopic(id)
     }
 }
