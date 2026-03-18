@@ -12,11 +12,11 @@ open class BoundFragment<VB : ViewBinding> : DaggerFragment<VB>() {
     private val error: ViewBinding
         get() = requireNotNull(_error) { "Couldn't read the binding on creation" }
 
-    protected fun onBoundContent(content: VB) {
+    protected fun onBindContent(content: VB) {
         _content = content
     }
 
-    protected fun onBoundError(error: ViewBinding) {
+    protected fun onBindError(error: ViewBinding) {
         _error = error
     }
 

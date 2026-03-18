@@ -72,14 +72,16 @@ class TopicsFragment : ParamsFragment<AssistedTopicsViewModelFactory, TopicsFrag
     private fun collectActions() {
         viewModel.actions.bind(viewLifecycleOwner) { action ->
             when (action) {
-                is Actions.NavigateToTopic -> {}
+                is Actions.NavigateToTopic -> {
+                    // TODO:
+                }
             }
         }
     }
 
     private fun setupErrorComponent() {
         val errorBinder = createErrorBinder(R.layout.no_topics_fragment)
-        onBoundError(error = errorBinder.bind(factory = NoTopicsFragmentBinding::bind))
+        onBindError(error = errorBinder.bind(factory = NoTopicsFragmentBinding::bind))
     }
 
     private fun onLoadedState(topics: List<Topic>) {
@@ -89,7 +91,7 @@ class TopicsFragment : ParamsFragment<AssistedTopicsViewModelFactory, TopicsFrag
 
     private fun createAdapterIfNeeded() {
         if (adapter == null) {
-            adapter = TopicsAdapter { viewModel.onTopicSelected(it) }
+            adapter = TopicsAdapter(viewModel::onTopicSelected)
         }
         val context = content.topics.context
         val layoutManager = LinearLayoutManager(requireContext())
