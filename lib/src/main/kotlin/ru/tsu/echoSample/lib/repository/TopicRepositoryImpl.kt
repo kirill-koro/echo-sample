@@ -9,8 +9,8 @@ import javax.inject.Inject
 class TopicRepositoryImpl @Inject constructor(
     private val echoApi: EchoApi,
 ) : TopicRepository {
-    override suspend fun getTopics(): List<Topic> {
-        return echoApi.getTopics().map(TopicMapper::mapToTopic)
+    override suspend fun getTopics(query: String): List<Topic> {
+        return echoApi.getTopics(query).map(TopicMapper::mapToTopic)
     }
 
     override suspend fun getTopic(id: Int): Topic {

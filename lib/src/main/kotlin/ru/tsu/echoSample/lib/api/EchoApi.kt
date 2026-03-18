@@ -6,7 +6,7 @@ import kotlin.time.Duration.Companion.milliseconds
 
 class EchoApi {
     @Suppress("MagicNumber")
-    suspend fun getTopics(): List<TopicDto> {
+    suspend fun getTopics(query: String): List<TopicDto> {
         delay(300.milliseconds)
         return List((0..10).random(), TopicDto::create)
     }

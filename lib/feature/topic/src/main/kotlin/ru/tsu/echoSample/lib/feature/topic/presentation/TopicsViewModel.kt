@@ -36,7 +36,7 @@ class TopicsViewModel @Inject constructor(
         _state.update { State.Fetching }
         viewModelScope.launch {
             try {
-                val topics = getTopics.await()
+                val topics = getTopics.await(params.query)
 
                 onFetchSuccess(topics)
             } catch (_: Exception) {
