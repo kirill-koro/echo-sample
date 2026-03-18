@@ -25,7 +25,7 @@ abstract class ScaffoldFragment<VB : ViewBinding> : BoundFragment<VB>() {
     ): View {
         _scaffold = ScaffoldFragmentBinding.inflate(inflater, container, false)
         val contentBinder = ContentBinder(scaffold.content, layoutRes)
-        onBoundContent(content = contentBinder.bind(factory = bind))
+        onBindContent(content = contentBinder.bind(factory = bind))
 
         return scaffold.root
     }
