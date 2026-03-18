@@ -6,9 +6,9 @@
     app:startDestination="@id/searchTopicsFragment">
 
     <fragment
-        android:id="@id/topicsFragment"
-        android:name="ru.tsu.echoSample.app.feature.topic.TopicsFragment"
-        tools:layout="@layout/topics_fragment" />
+        android:id="@id/recommendedTopicsFragment"
+        android:name="ru.tsu.echoSample.app.feature.topic.RecommendedTopicsFragment"
+        tools:layout="@layout/recommended_topics_fragment" />
 
     <fragment
         android:id="@id/searchTopicsFragment"

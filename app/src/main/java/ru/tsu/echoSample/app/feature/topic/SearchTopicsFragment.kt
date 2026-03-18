@@ -95,5 +95,5 @@ class SearchTopicsFragment :
         }
     }
 
-    override val screenKey = "topics"
+    override val screenKey = "browsed-topics"
 }

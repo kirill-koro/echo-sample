@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <ScrollView
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollIndicators="none"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sapien at massa pretium mattis at sed nulla. Fusce egestas odio ac velit congue, ut condimentum velit egestas. Ut diam tellus, tempor eu condimentum eu, iaculis id urna. Vivamus faucibus dolor lorem, vitae vestibulum dolor pretium varius. Mauris euismod malesuada accumsan. Aliquam quis diam placerat, cursus diam id, rutrum nisl. Phasellus non felis volutpat, mollis turpis sed, ultricies lacus. Aenean et eros convallis, semper leo sit amet, placerat orci. Nulla facilisi. Sed odio mi, blandit in blandit non, bibendum eu diam. Suspendisse potenti. Quisque at risus vel libero pretium pulvinar ut ut risus. Aliquam elit nisl, vehicula id posuere vel, congue vitae eros. Nunc nec lacinia nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas tellus nunc, tristique a risus quis, malesuada iaculis purus. Aenean venenatis a ante eu fringilla. Duis tincidunt efficitur est, non mollis orci pretium in. Aliquam eleifend porta mi, quis commodo nulla facilisis varius. Nunc interdum nisl sed dui eleifend, quis sagittis est bibendum. Morbi at eros justo. Donec vel ex ac odio efficitur gravida. Proin laoreet erat condimentum erat faucibus, non mollis nisl scelerisque. Pellentesque nec odio dictum nulla luctus tempor."
+                android:textAppearance="?attr/textAppearanceBodyMediumEmphasized" />
+        </FrameLayout>
+    </ScrollView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginVertical="4dp"
+        app:dividerColor="?attr/colorPrimary" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginVertical="4dp"
+        app:dividerColor="?attr/colorPrimary" />
+
+    <ScrollView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollIndicators="none"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam euismod dolor ut luctus blandit. Nam orci augue, blandit et tristique eget, consectetur in orci. Proin tincidunt, neque id semper porta, enim risus porttitor enim, vel malesuada tortor odio nec velit. Morbi posuere justo efficitur sem varius eleifend. Quisque ornare sed lacus et varius. Pellentesque vitae neque mi. Pellentesque consequat bibendum lorem eget lacinia. Sed vitae dolor lacinia, pharetra nisi at, interdum neque. Sed feugiat malesuada enim, nec porttitor purus suscipit a. Sed vel neque sed diam gravida faucibus eu et dolor. Fusce ac ante ex. Pellentesque a nisl id lacus pulvinar tempor. Morbi nisi sapien, elementum quis sagittis in, consequat vel eros. Aliquam laoreet elementum nibh eu ultricies. Fusce eu nunc ligula. Maecenas posuere fermentum turpis vitae dapibus. Donec enim nibh, feugiat quis odio in, convallis semper tortor. Suspendisse et euismod elit, at fringilla tellus. Nunc semper quam eget vulputate lobortis. Integer sodales nec libero a tristique. Quisque lacus erat, molestie in elementum a, ullamcorper eget mauris. Suspendisse dapibus sit amet nunc sed dapibus. Fusce sit amet egestas elit, nec tempor diam. Fusce nec gravida diam, fringilla luctus neque. Integer sed risus consequat, facilisis lectus nec, facilisis libero. Nullam sollicitudin mi nec dolor bibendum vulputate quis tincidunt turpis. Proin gravida maximus erat suscipit ornare. Maecenas varius purus ac dolor convallis, id mattis enim eleifend. Proin porta diam ac pharetra sodales. In commodo rhoncus congue."
+                android:textAppearance="?attr/textAppearanceBodyMediumEmphasized" />
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>

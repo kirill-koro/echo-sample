@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="24dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Lorem ipsum"
+        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="16dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        app:cardBackgroundColor="?attr/colorSecondaryContainer">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/topic_details_summary"
+                android:textAppearance="?attr/textAppearanceLabelLargeEmphasized" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"
+                android:maxLines="5"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie, nibh nec pretium commodo, sapien diam consectetur metus, laoreet condimentum justo nibh a turpis. Morbi ut tellus maximus, sagittis dui id, dictum elit. Vestibulum porttitor, urna id varius feugiat, lorem arcu molestie quam, ultricies commodo sapien justo accumsan mi. Donec aliquam elementum malesuada. Sed est neque, blandit vitae condimentum et, scelerisque id nisl. Aliquam at neque eget turpis rhoncus sollicitudin. Nunc mi dui, vehicula vitae nunc sed, ornare consequat quam. Vestibulum non arcu et erat tempor porta."
+                android:textAppearance="?attr/textAppearanceLabelMedium" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="32dp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="32"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare ex eget libero sodales accumsan. Suspendisse placerat lobortis egestas. Donec aliquam, diam sit amet tempus mattis, diam metus aliquam nunc, ut pellentesque est velit vitae urna. Integer in pretium sem, eu commodo eros. Etiam ut nulla lorem. Aenean sed pellentesque augue. Sed gravida risus nulla, id hendrerit ligula pharetra a. Fusce cursus condimentum enim in molestie. Proin magna mauris, suscipit eu vestibulum sit amet, rutrum vitae enim. Cras varius nunc arcu, nec tempus metus scelerisque vitae. Etiam molestie tincidunt mi, vel interdum risus accumsan eu. Vivamus at turpis et ipsum posuere vulputate. Suspendisse et felis bibendum nunc elementum volutpat. Praesent dictum libero nisi, sit amet scelerisque leo scelerisque a. Phasellus eget facilisis arcu, eget sollicitudin leo. Etiam id posuere elit. Cras bibendum ex id ipsum varius cursus. Maecenas viverra dolor nec facilisis hendrerit. Sed dignissim id mauris sit amet auctor. Duis tempus neque at lorem finibus fringilla. Nunc eleifend viverra vulputate. Praesent vitae urna sed dolor sodales ultrices. Phasellus odio lorem, interdum non volutpat vel, finibus a nisl. Nullam pellentesque nulla nec enim luctus, quis lobortis augue maximus. Donec ultricies pharetra ex non laoreet. Pellentesque accumsan lectus eros, et pellentesque magna ultricies eget. Nulla quis ex dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum et pharetra velit. Nam consequat condimentum venenatis. In ornare id metus ac maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sit amet felis vitae magna rhoncus sodales nec vitae elit. Quisque et mollis felis. Ut dapibus nibh ac congue hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in massa rutrum leo imperdiet fermentum. Sed sapien metus, eleifend vel malesuada id, lobortis eget turpis. Sed posuere justo et sapien rhoncus ornare. Mauris semper ut arcu non ultrices. Donec luctus, arcu at auctor dapibus, arcu felis elementum ipsum, nec convallis libero mauris nec velit. Vestibulum interdum scelerisque tortor ut lacinia. Donec egestas lectus ut diam aliquet mattis. Cras nec turpis aliquam ipsum lobortis efficitur sed a orci. Curabitur tortor leo, accumsan quis massa eget, convallis euismod tortor. Vivamus id volutpat nisi, quis pulvinar tortor. Cras faucibus justo interdum justo condimentum, at sagittis ipsum sagittis. Fusce bibendum, nulla vel dignissim tincidunt, arcu mi bibendum urna, sed commodo est est sit amet mi. Aliquam malesuada tincidunt massa id porttitor. Sed sagittis pretium dui id rutrum. Nam non aliquam tellus. Aliquam erat volutpat. Sed sed purus leo. Praesent consequat urna in mollis consequat."
+        android:textAppearance="?attr/textAppearanceBodyMedium" />
+</LinearLayout>

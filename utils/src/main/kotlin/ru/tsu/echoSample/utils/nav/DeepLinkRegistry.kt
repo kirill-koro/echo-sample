@@ -15,5 +15,10 @@ sealed class DeepLinkRegistry {
             raw += "?q=$value"
             return this
         }
+
+        fun id(value: Int): Request {
+            raw += "?id=$value"
+            return this
+        }
     }
 }

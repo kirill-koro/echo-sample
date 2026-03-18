@@ -3,24 +3,32 @@ package ru.tsu.echoSample.app.feature.topic
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
+import androidx.navigation.NavDeepLinkRequest
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.divider.MaterialDividerItemDecoration
 import ru.tsu.echoSample.app.R
+import ru.tsu.echoSample.app.databinding.BrowsedTopicsFragmentBinding
 import ru.tsu.echoSample.app.databinding.NoTopicsFragmentBinding
-import ru.tsu.echoSample.app.databinding.TopicsFragmentBinding
 import ru.tsu.echoSample.app.di.ParamsFragment
 import ru.tsu.echoSample.app.feature.topic.mapper.TopicMapper
+import ru.tsu.echoSample.app.feature.topic.nav.BrowsedTopicsNavigable
 import ru.tsu.echoSample.app.feature.topic.nav.QueryNotFoundException
 import ru.tsu.echoSample.app.utils.toolbar
 import ru.tsu.echoSample.lib.feature.topic.di.AssistedTopicsViewModelFactory
 import ru.tsu.echoSample.lib.feature.topic.model.Topic
-import ru.tsu.echoSample.lib.feature.topic.presentation.TopicsViewModel
-import ru.tsu.echoSample.lib.feature.topic.presentation.TopicsViewModel.Actions
-import ru.tsu.echoSample.lib.feature.topic.presentation.TopicsViewModel.State
+import ru.tsu.echoSample.lib.feature.topic.presentation.BrowsedTopicsViewModel
+import ru.tsu.echoSample.lib.feature.topic.presentation.BrowsedTopicsViewModel.Actions
+import ru.tsu.echoSample.lib.feature.topic.presentation.BrowsedTopicsViewModel.State
 import ru.tsu.echoSample.utils.binding.bind
+import ru.tsu.echoSample.utils.nav.DeepLinkRegistry
 
-class TopicsFragment : ParamsFragment<AssistedTopicsViewModelFactory, TopicsFragmentBinding>() {
-    private val viewModel: TopicsViewModel by getViewModel { TopicsViewModel.Params(query) }
+class BrowsedTopicsFragment :
+    ParamsFragment<AssistedTopicsViewModelFactory, BrowsedTopicsFragmentBinding>(),
+    BrowsedTopicsNavigable {
+    private val viewModel: BrowsedTopicsViewModel by getViewModel {
+        BrowsedTopicsViewModel.Params(query)
+    }
 
     private val query: String
         get() {
@@ -29,10 +37,10 @@ class TopicsFragment : ParamsFragment<AssistedTopicsViewModelFactory, TopicsFrag
                 ?: throw QueryNotFoundException(message)
         }
 
-    override val bind = TopicsFragmentBinding::bind
-    override val layoutRes = R.layout.topics_fragment
+    override val bind = BrowsedTopicsFragmentBinding::bind
+    override val layoutRes = R.layout.browsed_topics_fragment
 
-    private var adapter: TopicsAdapter? = null
+    private var adapter: BrowsedTopicsAdapter? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -72,9 +80,7 @@ class TopicsFragment : ParamsFragment<AssistedTopicsViewModelFactory, TopicsFrag
     private fun collectActions() {
         viewModel.actions.bind(viewLifecycleOwner) { action ->
             when (action) {
-                is Actions.NavigateToTopic -> {
-                    // TODO:
-                }
+                is Actions.NavigateToTopicDetails -> onNavigateToTopicDetails(action.id)
             }
         }
     }
@@ -91,7 +97,7 @@ class TopicsFragment : ParamsFragment<AssistedTopicsViewModelFactory, TopicsFrag
 
     private fun createAdapterIfNeeded() {
         if (adapter == null) {
-            adapter = TopicsAdapter(viewModel::onTopicSelected)
+            adapter = BrowsedTopicsAdapter(viewModel::onTopicSelected)
         }
         val context = content.topics.context
         val layoutManager = LinearLayoutManager(requireContext())
@@ -101,7 +107,19 @@ class TopicsFragment : ParamsFragment<AssistedTopicsViewModelFactory, TopicsFrag
         content.topics.addItemDecoration(divider)
     }
 
-    companion object {
+    override fun onNavigateToTopicDetails(id: Int) {
+        val uri = DeepLinkRegistry.Request(screenKey)
+            .id(id)
+            .uri
+        val topicDetails = NavDeepLinkRequest.Builder
+            .fromUri(uri)
+            .build()
+        findNavController().navigate(topicDetails)
+    }
+
+    override val screenKey = "topic-details"
+
+    companion object Companion {
         private const val QUERY_ARG_KEY = "query"
     }
 }

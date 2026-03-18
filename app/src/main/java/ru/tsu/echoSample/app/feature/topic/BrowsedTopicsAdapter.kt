@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.tsu.echoSample.app.databinding.TopicItemBinding
-import ru.tsu.echoSample.app.feature.topic.TopicsAdapter.ViewHolder
+import ru.tsu.echoSample.app.feature.topic.BrowsedTopicsAdapter.ViewHolder
 import ru.tsu.echoSample.app.feature.topic.model.TopicUi
 
-class TopicsAdapter : RecyclerView.Adapter<ViewHolder> {
+class BrowsedTopicsAdapter : RecyclerView.Adapter<ViewHolder> {
     constructor(listener: OnItemSelectedListener) : super() {
         this.listener = listener
         setHasStableIds(true)
@@ -51,7 +51,7 @@ class TopicsAdapter : RecyclerView.Adapter<ViewHolder> {
         fun onNavigateToTopicDetails(id: Int)
     }
 
-    companion object {
+    companion object Companion {
         private const val START_IDX = 0
     }
 }

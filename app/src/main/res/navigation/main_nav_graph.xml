@@ -11,14 +11,34 @@
         tools:layout="@layout/home_fragment" />
 
     <fragment
-        android:id="@+id/topicsFragment"
-        android:name="ru.tsu.echoSample.app.feature.topic.TopicsFragment"
-        tools:layout="@layout/topics_fragment">
+        android:id="@+id/browsedTopicsFragment"
+        android:name="ru.tsu.echoSample.app.feature.topic.BrowsedTopicsFragment"
+        tools:layout="@layout/browsed_topics_fragment">
 
         <argument
             android:name="query"
             app:argType="string" />
 
-        <deepLink app:uri="echo://ru.tsu/topics?q={query}" />
+        <deepLink app:uri="echo://ru.tsu/browsed-topics?q={query}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/topicDetailsFragment"
+        android:name="ru.tsu.echoSample.app.feature.topic.TopicDetailsFragment"
+        tools:layout="@layout/topic_details_fragment">
+
+        <argument
+            android:name="id"
+            app:argType="integer" />
+
+        <deepLink app:uri="echo://ru.tsu/topic-details?id={id}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/comparatorFragment"
+        android:name="ru.tsu.echoSample.app.feature.comparator.ComparatorFragment"
+        tools:layout="@layout/comparator_fragment">
+
+        <deepLink app:uri="echo://ru.tsu/comparator" />
     </fragment>
 </navigation>

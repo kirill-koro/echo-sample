@@ -17,29 +17,18 @@ data class TopicDto(
 
     companion object {
         @Suppress("MagicNumber")
-        fun create(id: Int): TopicDto {
-            return TopicDto(
-                id = id,
-                sources = List((1..5).random(), SourceDto::create),
-                title = "Title ${(0..100).random()}",
-                summary = "Summary",
-                content = "Content",
-                createdAt = (0..100_000).random(),
-            )
-        }
-
-        @Suppress("MagicNumber")
         fun create(
             id: Int,
             title: String,
             summary: String,
+            content: String,
         ): TopicDto {
             return TopicDto(
                 id = id,
                 sources = List((1..5).random(), SourceDto::create),
                 title = title,
                 summary = summary,
-                content = "Content",
+                content = content,
                 createdAt = (0..100_000).random(),
             )
         }

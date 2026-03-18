@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/topicsFragment"
+        android:id="@+id/recommendedTopicsFragment"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
-        android:title="@string/topics_bottom_nav_title" />
+        android:title="@string/recommended_topics_bottom_nav_title" />
 
     <item
         android:id="@+id/searchTopicsFragment"

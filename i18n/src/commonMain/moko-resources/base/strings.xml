@@ -9,16 +9,18 @@
     <string name="search_topics_search_content">What topic are you interested in?</string>
     <string name="search_topics_search_field_error">The search query cannot be empty</string>
 
-    <string name="topics_greeting">Topics</string>
-    <string name="topics_bottom_nav_title">Topics</string>
+    <string name="recommended_topics_greeting">Recommended topics</string>
+    <string name="recommended_topics_bottom_nav_title">Topics</string>
 
     <string name="profile_greeting">Profile</string>
     <string name="profile_bottom_nav_title">Profile</string>
 
-    <string name="topics_toolbar">Search</string>
+    <string name="browsed_topics_toolbar">Search</string>
 
-    <string name="no_topics_title">No topics were found, please subscribe below to get notified when
-        ready.
-    </string>
+    <string name="no_topics_title">No topics were found, please subscribe below to get notified when ready.</string>
     <string name="no_topics_subscribe_button">Subscribe</string>
+
+    <string name="topic_details_summary">Summary</string>
+
+    <string name="comparator_toolbar">Compare</string>
 </resources>

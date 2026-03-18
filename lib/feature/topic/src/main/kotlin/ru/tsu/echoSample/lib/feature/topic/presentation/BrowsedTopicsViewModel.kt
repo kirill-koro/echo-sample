@@ -15,7 +15,7 @@ import ru.tsu.echoSample.lib.feature.topic.interactor.GetTopics
 import ru.tsu.echoSample.lib.feature.topic.model.Topic
 import ru.tsu.echoSample.lib.utils.di.viewmodel.sendAction
 
-class TopicsViewModel @AssistedInject constructor(
+class BrowsedTopicsViewModel @AssistedInject constructor(
     @Assisted private val params: Params,
     private val getTopics: GetTopics,
 ) : ViewModel() {
@@ -55,7 +55,7 @@ class TopicsViewModel @AssistedInject constructor(
     }
 
     fun onTopicSelected(id: Int) {
-        sendAction(_actions, Actions.NavigateToTopic(id))
+        sendAction(_actions, Actions.NavigateToTopicDetails(id))
     }
 
     sealed interface State {
@@ -71,7 +71,7 @@ class TopicsViewModel @AssistedInject constructor(
     }
 
     sealed interface Actions {
-        data class NavigateToTopic(val id: Int) : Actions
+        data class NavigateToTopicDetails(val id: Int) : Actions
     }
 
     data class Params(val query: String)
