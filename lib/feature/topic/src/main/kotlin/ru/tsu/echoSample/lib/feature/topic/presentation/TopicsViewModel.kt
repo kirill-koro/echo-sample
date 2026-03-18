@@ -3,6 +3,7 @@ package ru.tsu.echoSample.lib.feature.topic.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,14 +14,12 @@ import kotlinx.coroutines.launch
 import ru.tsu.echoSample.lib.feature.topic.interactor.GetTopics
 import ru.tsu.echoSample.lib.feature.topic.model.Topic
 import ru.tsu.echoSample.lib.utils.di.viewmodel.sendAction
-import javax.inject.Inject
 
-class TopicsViewModel @Inject constructor(
-    @Assisted
-    private val params: Params,
+class TopicsViewModel @AssistedInject constructor(
+    @Assisted private val params: Params,
     private val getTopics: GetTopics,
 ) : ViewModel() {
-    private val _state = MutableStateFlow<State>(State.Fetching)
+    private val _state = MutableStateFlow<State>(State.Idle)
     val state = _state.asStateFlow()
 
     private val _actions = Channel<Actions>()
@@ -60,6 +59,8 @@ class TopicsViewModel @Inject constructor(
     }
 
     sealed interface State {
+        data object Idle : State
+
         data object Fetching : State
 
         data class Loaded(val topics: List<Topic>) : State

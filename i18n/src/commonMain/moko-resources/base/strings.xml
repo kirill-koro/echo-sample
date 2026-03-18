@@ -14,4 +14,11 @@
 
     <string name="profile_greeting">Profile</string>
     <string name="profile_bottom_nav_title">Profile</string>
+
+    <string name="topics_toolbar">Search</string>
+
+    <string name="no_topics_title">No topics were found, please subscribe below to get notified when
+        ready.
+    </string>
+    <string name="no_topics_subscribe_button">Subscribe</string>
 </resources>
