@@ -40,6 +40,7 @@ class TopicsAdapter : RecyclerView.Adapter<ViewHolder> {
         val topic = items[position]
         with(holder.binding) {
             title.text = topic.title
+            summary.text = topic.summary
             root.setOnClickListener { listener.onNavigateToTopicDetails(topic.id) }
         }
     }

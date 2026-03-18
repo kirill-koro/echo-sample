@@ -5,10 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.viewbinding.ViewBinding
-import ru.tsu.echoSample.app.component.BoundFragment
+import ru.tsu.echoSample.app.component.ScaffoldFragment
 import javax.inject.Inject
 
-abstract class NoParamsFragment<VB : ViewBinding> : BoundFragment<VB>() {
+abstract class NoParamsFragment<VB : ViewBinding> : ScaffoldFragment<VB>() {
     @Inject
     lateinit var defaultFactory: ViewModelProvider.Factory
 

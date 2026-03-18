@@ -1,30 +1,35 @@
 package ru.tsu.echoSample.app.component
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import ru.tsu.echoSample.app.di.DaggerFragment
 
-abstract class BoundFragment<VB : ViewBinding> : DaggerFragment<VB>() {
-    private var _binding: VB? = null
-    protected val binding: VB
-        get() = requireNotNull(_binding) { "Couldn't read the binding on creation" }
+open class BoundFragment<VB : ViewBinding> : DaggerFragment<VB>() {
+    private var _content: VB? = null
+    protected val content: VB
+        get() = requireNotNull(_content) { "Couldn't read the content on creation" }
 
-    protected abstract val inflate: (LayoutInflater, ViewGroup?, Boolean) -> VB
+    private var _error: ViewBinding? = null
+    private val error: ViewBinding
+        get() = requireNotNull(_error) { "Couldn't read the binding on creation" }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = inflate(inflater, container, false)
-        return binding.root
+    protected fun onBoundContent(content: VB) {
+        _content = content
+    }
+
+    protected fun onBoundError(error: ViewBinding) {
+        _error = error
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    protected fun <T : ViewBinding> errorAs(): T {
+        val error = this.error as? T
+        requireNotNull(error) { "Couldn't cast the error binding" }
+        return error
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        _content = null
+        _error = null
     }
 }
